@@ -1,8 +1,7 @@
-# Task Manager - Written in Python
+# Task Manager - A command-line task manager written in Python
 
 # Imports
 import os
-import subprocess
 import pickle
 from datetime import datetime
 
@@ -65,9 +64,9 @@ def mark_as_complete():
         # Save the tasks to the pickle file
         save_tasks()
     except IndexError:
-        print("Invalid task ID")
+        print("Invalid task ID. Please enter a valid ID.")
     except ValueError:
-        print("Invalid input")
+        print("Invalid input. Please enter a valid ID.")
 
 # Function to delete a task
 def delete_task():
@@ -81,9 +80,9 @@ def delete_task():
         # Save the tasks to the pickle file
         save_tasks()
     except IndexError:
-        print("Invalid task ID")
+        print("Invalid task ID. Please enter a valid ID.")
     except ValueError:
-        print("Invalid input")
+        print("Invalid input. Please enter a valid ID.")
 
 # Function to display the options
 def display_options():
@@ -100,7 +99,7 @@ def display_options():
             print("Thank you for using the Task Manager!")
             break
         else:
-            print("Invalid option")
+            print("Invalid option. Please enter a valid option.")
         print_tasks()
 
 # Function to check if this is the first time the program is being run
